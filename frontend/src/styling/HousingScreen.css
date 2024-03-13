@@ -1,0 +1,115 @@
+.housing-details {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .image-container {
+    max-height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-container img:hover {
+    transform: scale(1.05);
+  }
+  
+  .list-group-item {
+    background-color: #f8f8f8;
+    border: none;
+  }
+  
+  .housing-info {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .housing-info h3 {
+    color: #0056b3;
+    margin-bottom: 1rem;
+  }
+  
+  .housing-review {
+    border-top: 1px solid #e4e4e4;
+    padding-top: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .review-card {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 4px;
+  }
+  
+  .review-card h5 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .review-card .date {
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .write-review {
+    background: #f4f4f4;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 4px;
+  }
+  
+  .write-review h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .write-review form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .write-review form label {
+    margin: 0.5rem 0;
+  }
+  
+  .write-review form textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }
+  
+  .write-review form button {
+    max-width: 200px;
+    background: #0056b3;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .write-review form button:hover {
+    background: #004085;
+  }
+  
+  /* Make sure you handle responsiveness */
+  @media (max-width: 768px) {
+    .image-container {
+      margin-bottom: 1rem;
+    }
+  
+    .write-review form button {
+      max-width: 100%;
+    }
+  }
+  

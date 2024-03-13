@@ -1,0 +1,30 @@
+.rating {
+    color: #f8e825; /* Golden color for stars */
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem; /* Adjust the size of the stars */
+  }
+  
+  .star {
+    margin: 0 2px; /* Add a little space around each star */
+    transition: transform 0.2s ease;
+  }
+  
+  .star:hover {
+    transform: scale(1.1); /* Scale stars on hover for a subtle animation effect */
+  }
+  
+  .rating-text {
+    margin-left: 4px;
+    font-size: 0.9rem; /* Adjust text size if necessary */
+    color: #333; /* Darker text for contrast */
+    white-space: nowrap; /* Keeps the text in a single line */
+  }
+  
+  /* Add responsiveness to the Rating component */
+  @media (max-width: 768px) {
+    .rating {
+      font-size: 0.8rem; /* Smaller stars on smaller screens */
+    }
+  }
+  

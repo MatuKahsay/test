@@ -1,0 +1,103 @@
+/* login.css */
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e2e2e2; /* Light grey background for slight contrast */
+}
+
+.login-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background: linear-gradient(135deg, #74EBD5 0%, #ACB6E5 100%);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.FormContainer {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.Form {
+    display: flex;
+    flex-direction: column;
+}
+
+.Form-Group {
+    margin-bottom: 1.5rem;
+}
+
+.Form-Label {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #666;
+}
+
+.Form-Control {
+    font-size: 1rem;
+    padding: 0.75rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.Form-Control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0,123,255,.25);
+}
+
+.Button {
+    padding: 0.75rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-out;
+}
+
+.Button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.Row {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.Link {
+    color: #007bff;
+    transition: color 0.3s ease-in-out;
+}
+
+.Link:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .FormContainer {
+        padding: 1rem;
+        border-radius: 15px;
+    }
+}

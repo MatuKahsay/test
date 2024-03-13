@@ -1,0 +1,169 @@
+/* Combined MapScreen.css and MapSideBar.css */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+.map-screen-container {
+  display: flex; /* Set the container to flex to align side by side */
+  position: fixed; /* Fixed position to cover the whole screen */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden; /* Prevents scrollbars on the map screen */
+}
+
+.sidebar {
+  width: 300px; /* Width of the sidebar */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  padding: 20px; /* Padding inside the sidebar */
+  height: 100vh; /* Full height */
+  overflow-y: auto; /* Allows for vertical scrolling */
+  box-sizing: border-box; /* Ensures padding is included in the width */
+  z-index: 2; /* Ensure the sidebar is above the map */
+}
+
+.search-bar {
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px 15px;
+  width: calc(100% - 30px); /* Adjust width accounting for padding */
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.search-bar::placeholder {
+  color: #999;
+}
+
+.search-bar:focus {
+  border-color: #4d90fe;
+  box-shadow: 0 0 8px rgba(77, 144, 254, 0.5);
+}
+
+/* Style for the Map component container */
+.google-map-container {
+  flex-grow: 1; /* Fills the remaining space next to the sidebar */
+  height: 100vh; /* Full height of the screen */
+}
+
+.sidebar-housing {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+.sidebar-housing:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-housing-link {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.sidebar-housing-img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.sidebar-housing-info {
+  width: 50%;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.sidebar-housing-info h5 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* Ensure map controls are positioned above the map layer */
+.google-map-controls {
+  z-index: 3;
+}
+
+.map-controls {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 3;
+}
+
+
+.housing-info-box {
+  background-color: #fff; /* A clean white background */
+  border-radius: 8px; /* Soft rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* A subtle shadow for depth */
+  padding: 20px; /* Generous padding for airy feel */
+  max-width: 350px; /* Restricting max width for a card-like feel */
+  margin: auto; /* Center it */
+  font-family: 'Nunito', sans-serif; /* Modern, friendly sans-serif font */
+  line-height: 1.6;
+}
+
+.housing-info-box h2 {
+  color: #333; /* Slightly dark text for contrast */
+  font-size: 24px; /* Clear, large title size */
+  font-weight: 700; /* Bold for importance */
+  margin-bottom: 12px; /* Space after the title */
+}
+
+.housing-info-box p {
+  color: #666; /* Less contrast for body text */
+  margin-bottom: 16px; /* Consistent spacing after paragraphs */
+}
+
+.housing-info-box h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.housing-info-box ul {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Reset padding */
+  margin: 0; /* Reset margins */
+}
+
+.housing-info-box li {
+  background-color: #f7f7f7; /* Slightly off-white for reviews */
+  border-radius: 5px; /* Rounded corners for review items */
+  padding: 10px;
+  margin-bottom: 8px; /* Space between review items */
+}
+
+.housing-info-box .info-box-buttons {
+  display: flex;
+  justify-content: space-around; /* Space out buttons */
+  margin-top: 20px;
+}
+
+.info-box-button {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Match border-radius with info box */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.info-box-button:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+}

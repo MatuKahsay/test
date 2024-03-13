@@ -1,0 +1,34 @@
+.housing-card {
+    /* ... your existing styles ... */
+    /* Add a fixed height to the card to make all cards the same size */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .housing-image {
+    /* ... your existing styles ... */
+    /* Set a fixed height for all images */
+    height: 200px;
+  }
+  
+  .card-body {
+    /* ... your existing styles ... */
+    flex-grow: 1; /* This will make the card body take up all available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This will push the text to the top and bottom */
+  }
+  
+  .card-title,
+  .card-text {
+    /* ... your existing styles ... */
+  }
+  
+  /* Added style to ensure text description has a uniform size */
+  .card-text:last-child {
+    /* Set a fixed height or minimum height for the description to ensure uniformity */
+    min-height: 60px; /* Adjust as needed to fit your content */
+    overflow: hidden; /* This will hide any overflow if the text is too long */
+  }
+  

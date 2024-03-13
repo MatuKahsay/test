@@ -1,0 +1,60 @@
+.landing-page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .split-screen {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .left-half,
+  .right-half {
+    flex: 1;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease, filter 0.5s ease;
+  }
+  
+  .left-half:hover,
+  .right-half:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+  
+  .centered-content {
+    z-index: 2;
+    text-align: center;
+    color: #fff; /* White text color */
+    background: rgba(0, 0, 0, 0.3); /* More transparency */
+    border-radius: 15px;
+    padding: 1rem; /* Reduced padding */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: auto; /* Adjust width as needed */
+    max-width: 80%; /* Maximum width to prevent it from being too wide */
+  }
+  
+  .centered-content img {
+    max-width: 250px;
+    margin-bottom: 0.5rem; /* Adjusted margin */
+  }
+  
+  /* Because we use absolute positioning for split-screen,
+     we need to make sure the centered content doesn't extend
+     beyond the viewable area on small screens */
+  @media (max-width: 600px) {
+    .centered-content {
+      width: 90%;
+    }
+  }
+  
